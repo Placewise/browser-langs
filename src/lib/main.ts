@@ -3,13 +3,13 @@ import { LanguageData, LANGUAGES_DATA } from './data/languages-data';
 
 export class Language {
   /**
-   * Common name of language.
+   * Common name of language (only).
    */
-  public name: string;
+  public languageName: string;
   /**
-   * Local name of language.
+   * Local name of language (only).
    */
-  public local: string;
+  public languageLocal: string;
   /**
    * ISO 639-1 language code.
    */
@@ -24,8 +24,8 @@ export class Language {
     countryCode: string = '',
     countryData?: CountryData | null
   ) {
-    this.name = languageData.name;
-    this.local = languageData.local;
+    this.languageName = languageData.name;
+    this.languageLocal = languageData.local;
     this.iso639 = languageData.code;
 
     if (countryData) {
@@ -46,6 +46,28 @@ export class Language {
     }
 
     return `${this.iso639}-${this.country.code}`;
+  }
+
+  /**
+   * Common name of language with country.
+   */
+  public get name(): string {
+    if (!this.country) {
+      return this.languageName;
+    }
+
+    return `${this.languageName} (${this.country.name})`;
+  }
+
+  /**
+   * Local name of language with country.
+   */
+  public get local(): string {
+    if (!this.country) {
+      return this.languageLocal;
+    }
+
+    return `${this.languageLocal} (${this.country.local})`;
   }
 }
 
@@ -82,11 +104,15 @@ export function all(): Language[] {
  * Find desired language via full language code
  * @param languageCode - language code
  */
-export function find(languageCode: string): Language | undefined {
+export function find(languageCode: string): Language | null {
   if (!allCache) {
     prepareAllCache();
   }
-  return allCache.find(l => l.code === languageCode);
+
+  const lowercasedLanguageCode = languageCode.toLowerCase();
+  return (
+    allCache.find(l => l.code.toLowerCase() === lowercasedLanguageCode) || null
+  );
 }
 
 function findCountry(countryCode: string): Country | null {
