@@ -3,7 +3,7 @@ export interface LanguageData {
   readonly local: string;
   readonly code: string;
   readonly countries?: readonly string[];
-};
+}
 
 export const LANGUAGES_DATA: ReadonlyArray<LanguageData> = [
   { name: 'Abkhaz', local: 'Аҧсуа', code: 'ab' },
@@ -12,7 +12,29 @@ export const LANGUAGES_DATA: ReadonlyArray<LanguageData> = [
   { name: 'Akan', local: 'Akan', code: 'ak' },
   { name: 'Albanian', local: 'Shqip', code: 'sq' },
   { name: 'Amharic', local: 'አማርኛ', code: 'am' },
-  { name: 'Arabic', local: 'العربية', code: 'ar', countries: ['DZ', 'BH', 'EG', 'IQ', 'JO', 'KW', 'LB', 'LY', 'MA', 'OM', 'QA', 'SA', 'SY', 'TN', 'AE', 'YE'] },
+  {
+    name: 'Arabic',
+    local: 'العربية',
+    code: 'ar',
+    countries: [
+      'DZ',
+      'BH',
+      'EG',
+      'IQ',
+      'JO',
+      'KW',
+      'LB',
+      'LY',
+      'MA',
+      'OM',
+      'QA',
+      'SA',
+      'SY',
+      'TN',
+      'AE',
+      'YE'
+    ]
+  },
   { name: 'Aragonese', local: 'Aragonés', code: 'an' },
   { name: 'Armenian', local: 'Հայերեն', code: 'hy' },
   { name: 'Assamese', local: 'অসমীয়া', code: 'as' },
@@ -35,7 +57,12 @@ export const LANGUAGES_DATA: ReadonlyArray<LanguageData> = [
   { name: 'Chamorro', local: 'Chamoru', code: 'ch' },
   { name: 'Chechen', local: 'Нохчийн', code: 'ce' },
   { name: 'Chichewa', local: 'Chichewa', code: 'ny' },
-  { name: 'Chinese', local: '中文', code: 'zh', countries: ['HK', 'CN', 'SG', 'TW'] },
+  {
+    name: 'Chinese',
+    local: '中文',
+    code: 'zh',
+    countries: ['HK', 'CN', 'SG', 'TW']
+  },
   { name: 'Chuvash', local: 'Чӑвашла', code: 'cv' },
   { name: 'Cornish', local: 'Kernewek', code: 'kw' },
   { name: 'Corsican', local: 'Corsu', code: 'co' },
@@ -46,18 +73,46 @@ export const LANGUAGES_DATA: ReadonlyArray<LanguageData> = [
   { name: 'Divehi', local: 'Divehi', code: 'dv' },
   { name: 'Dutch', local: 'Nederlands', code: 'nl', countries: ['BE'] },
   { name: 'Dzongkha', local: 'རྫོང་ཁ', code: 'dz' },
-  { name: 'English', local: 'English', code: 'en', countries: ['AU', 'BZ', 'CA', 'IE', 'JM', 'NZ', 'PH', 'ZA', 'TT', 'GB', 'US', 'ZW'] },
+  {
+    name: 'English',
+    local: 'English',
+    code: 'en',
+    countries: [
+      'AU',
+      'BZ',
+      'CA',
+      'IE',
+      'JM',
+      'NZ',
+      'PH',
+      'ZA',
+      'TT',
+      'GB',
+      'US',
+      'ZW'
+    ]
+  },
   { name: 'Esperanto', local: 'Esperanto', code: 'eo' },
   { name: 'Estonian', local: 'Eesti', code: 'et' },
   { name: 'Ewe', local: 'Eʋegbe', code: 'ee' },
   { name: 'Faroese', local: 'Føroyskt', code: 'fo' },
   { name: 'Fijian', local: 'Na Vosa Vaka-Viti', code: 'fj' },
   { name: 'Finnish', local: 'Suomi', code: 'fi' },
-  { name: 'French', local: 'Français', code: 'fr', countries: ['BE', 'CA', 'FR', 'LU', 'MC', 'CH'] },
+  {
+    name: 'French',
+    local: 'Français',
+    code: 'fr',
+    countries: ['BE', 'CA', 'FR', 'LU', 'MC', 'CH']
+  },
   { name: 'Fula', local: 'Fulfulde', code: 'ff' },
   { name: 'Galician', local: 'Galego', code: 'gl' },
   { name: 'Georgian', local: 'ქართული', code: 'ka' },
-  { name: 'German', local: 'Deutsch', code: 'de', countries: ['AT', 'DE', 'LI', 'LU', 'CH'] },
+  {
+    name: 'German',
+    local: 'Deutsch',
+    code: 'de',
+    countries: ['AT', 'DE', 'LI', 'LU', 'CH']
+  },
   { name: 'Greek', local: 'Ελληνικά', code: 'el' },
   { name: 'Guaraní', local: "Avañe'ẽ", code: 'gn' },
   { name: 'Gujarati', local: 'ગુજરાતી', code: 'gu' },
@@ -154,7 +209,32 @@ export const LANGUAGES_DATA: ReadonlyArray<LanguageData> = [
   { name: 'Slovene', local: 'Slovenščina', code: 'sl' },
   { name: 'Somali', local: 'Soomaaliga', code: 'so' },
   { name: 'Southern Sotho', local: 'Sesotho', code: 'st' },
-  { name: 'Spanish', local: 'Español', code: 'es', countries: ['AR', 'BO', 'CL', 'CO', 'CR', 'DO', 'EC', 'SV', 'GT', 'HN', 'MX', 'NI', 'PA', 'PY', 'PE', 'PR', 'ES', 'UY', 'VE'] },
+  {
+    name: 'Spanish',
+    local: 'Español',
+    code: 'es',
+    countries: [
+      'AR',
+      'BO',
+      'CL',
+      'CO',
+      'CR',
+      'DO',
+      'EC',
+      'SV',
+      'GT',
+      'HN',
+      'MX',
+      'NI',
+      'PA',
+      'PY',
+      'PE',
+      'PR',
+      'ES',
+      'UY',
+      'VE'
+    ]
+  },
   { name: 'Sundanese', local: 'Basa Sunda', code: 'su' },
   { name: 'Swahili', local: 'Kiswahili', code: 'sw' },
   { name: 'Swati', local: 'SiSwati', code: 'ss' },
@@ -189,5 +269,5 @@ export const LANGUAGES_DATA: ReadonlyArray<LanguageData> = [
   { name: 'Yiddish', local: 'ייִדיש', code: 'yi' },
   { name: 'Yoruba', local: 'Yorùbá', code: 'yo' },
   { name: 'Zhuang', local: 'Cuengh', code: 'za' },
-  { name: 'Zulu', local: 'isiZulu', code: 'zu' },
+  { name: 'Zulu', local: 'isiZulu', code: 'zu' }
 ];
