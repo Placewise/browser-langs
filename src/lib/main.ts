@@ -69,6 +69,20 @@ export class Language {
 
     return `${this.languageLocal} (${this.country.local})`;
   }
+
+  /**
+   * Returns serialized Language object (some libraries aren't handling objects correctly e.g. select2)
+   */
+  public serialized(): any {
+    return {
+      languageName: this.languageName,
+      languageLocal: this.languageLocal,
+      iso639: this.iso639,
+      code: this.code,
+      name: this.name,
+      local: this.local
+    };
+  }
 }
 
 export interface Country {
