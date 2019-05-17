@@ -2,7 +2,7 @@ export interface LanguageData {
   readonly name: string;
   readonly local: string;
   readonly code: string;
-  readonly countries?: readonly string[];
+  readonly countries?: string[];
 }
 
 export const LANGUAGES_DATA: ReadonlyArray<LanguageData> = [

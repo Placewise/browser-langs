@@ -3,7 +3,7 @@ export interface CountryData {
   readonly local: string;
 }
 
-export const COUNTRIES_DATA: { readonly [k: string]: CountryData } = {
+export const COUNTRIES_DATA: { [k: string]: CountryData } = {
   AW: { name: 'Aruba', local: 'Aruba' },
   // tslint:disable-next-line:object-literal-sort-keys
   AF: { name: 'Afghanistan', local: 'جمهوری اسلامی افغانستان' },
