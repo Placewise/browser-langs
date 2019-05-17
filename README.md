@@ -25,7 +25,8 @@ or
 
 ## Credits
 
-* https://github.com/adlawson/nodejs-langs
+* Language codes: https://github.com/adlawson/nodejs-langs
+* Original list of countries: https://github.com/mledoze/countries
 
 ## License
 
