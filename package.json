@@ -1,6 +1,6 @@
 {
   "name": "browser-langs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Language codes used by browser",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
