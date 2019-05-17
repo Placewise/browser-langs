@@ -56,6 +56,9 @@ export interface Country {
 
 let allCache: Language[];
 
+/**
+ * Fetch all available languages.
+ */
 export function all(): Language[] {
   if (allCache) { return allCache; }
 
@@ -63,6 +66,10 @@ export function all(): Language[] {
   return allCache;
 }
 
+/**
+ * Find desired language via full language code
+ * @param languageCode - language code
+ */
 export function find(languageCode: string): Language | undefined {
   if (!allCache) { prepareAllCache(); }
   return allCache.find((l) => l.code === languageCode);
