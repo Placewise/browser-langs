@@ -65,14 +65,30 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<h1 id="browser-langs">Browser Langs</h1>
-				<h2 id="installation">Installation</h2>
-				<p>TODO</p>
 				<h2 id="what-s-inside-">What&#39;s inside?</h2>
 				<p><a href="https://tools.ietf.org/html/bcp47">BCP47</a> defines standard for language codes that browser should use. Specification is quite wide but we will use most common setup which is used today:</p>
 				<pre><code>&lt;<span class="hljs-number">2</span> letter ISO <span class="hljs-number">639</span>&gt;
 <span class="hljs-regexp">//</span> e.g. <span class="hljs-string">"no"</span>, <span class="hljs-string">"ca"</span>, <span class="hljs-string">"nl"</span></code></pre><p>or</p>
 				<pre><code>&lt;<span class="hljs-number">2</span> letter ISO <span class="hljs-number">639</span>&gt;-&lt;ISO <span class="hljs-number">3166</span><span class="hljs-number">-1</span>&gt;
-<span class="hljs-comment">// e.g. "es-mx", "ar-sa", "nl-be"</span></code></pre><h2 id="documentation">Documentation</h2>
+<span class="hljs-comment">// e.g. "es-mx", "ar-sa", "nl-be"</span></code></pre><h2 id="installation">Installation</h2>
+				<pre><code class="language-bash">npm i browser-langs
+<span class="hljs-comment"># or</span>
+yarn add browser-langs</code></pre>
+				<h2 id="documentation">Documentation</h2>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { all, find } <span class="hljs-keyword">from</span> <span class="hljs-string">'browser-langs'</span>;
+
+<span class="hljs-comment">// get list of all cultural (and not only) language codes</span>
+all() <span class="hljs-comment">// list of `Language` objects returned</span>
+
+<span class="hljs-comment">// find language matching language code</span>
+find(<span class="hljs-string">'en'</span>) <span class="hljs-comment">// English Language object will be returned</span>
+find(<span class="hljs-string">'en-gb'</span>) <span class="hljs-comment">// English (United Kingdom) Language object will be returned</span>
+
+<span class="hljs-comment">// detect currently selected language in browser</span>
+detect() <span class="hljs-comment">// current (most matching) Language object will be returned</span>
+
+<span class="hljs-comment">// detect currently selected languages in browser (based on priority)</span>
+detectAll() <span class="hljs-comment">// returns list of current Language objects</span></code></pre>
 				<h2 id="credits">Credits</h2>
 				<ul>
 					<li>Language codes: <a href="https://github.com/adlawson/nodejs-langs">https://github.com/adlawson/nodejs-langs</a></li>
@@ -117,13 +133,28 @@
 						<a href="globals.html#all" class="tsd-kind-icon">all</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#detect" class="tsd-kind-icon">detect</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#detectall" class="tsd-kind-icon">detect<wbr>All</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#find" class="tsd-kind-icon">find</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#findcountry" class="tsd-kind-icon">find<wbr>Country</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#getcurrentlanguagecode" class="tsd-kind-icon">get<wbr>Current<wbr>Language<wbr>Code</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#getcurrentlanguagecodes" class="tsd-kind-icon">get<wbr>Current<wbr>Language<wbr>Codes</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#prepareallcache" class="tsd-kind-icon">prepare<wbr>All<wbr>Cache</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#processlanguagecode" class="tsd-kind-icon">process<wbr>Language<wbr>Code</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#countries_data" class="tsd-kind-icon">COUNTRIES_<wbr>DATA</a>
