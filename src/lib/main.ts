@@ -1,2 +1,2 @@
-export { all, find, findCountry } from './language';
+export { all, find, findCountry, allCountries } from './language';
 export { detect, detectAll } from './detector';

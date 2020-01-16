@@ -115,6 +115,16 @@ export function all(): Language[] {
 }
 
 /**
+ * Fetch all available countries.
+ */
+export function allCountries(): Country[] {
+  return Object.keys(COUNTRIES_DATA).map(code => {
+    const countryData = COUNTRIES_DATA[code];
+    return { code, name: countryData[0], local: countryData[1] };
+  });
+}
+
+/**
  * Find desired language via full language code
  * @param languageCode - language code
  */
