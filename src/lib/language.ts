@@ -129,7 +129,7 @@ export function find(languageCode: string): Language | null {
   );
 }
 
-function findCountry(countryCode: string): Country | null {
+export function findCountry(countryCode: string): Country | null {
   const country = COUNTRIES_DATA[countryCode];
 
   return country
